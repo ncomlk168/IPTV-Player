@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.4/dist/hls.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">📺 IPTV Player</div>
+                <input type="text" class="search-box" id="searchInput" placeholder="Search channels...">
+                <button class="load-playlist-btn" id="loadPlaylistBtn">Load IPTV Playlist</button>
+            </div>
+            <div class="channels-container">
+                <div class="channels-list" id="channelsList">
+                    <div class="no-channels">
+                        <div class="no-channels-icon">📡</div>
+                        <h3>Loading Channels...</h3>
+                        <p style="margin-top: 8px; color: rgba(255,255,255,0.6);">Please wait while we load the default playlist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <button class="toggle-sidebar-btn" id="toggleSidebar">☰</button>
+            
+            <div class="video-container">
+                <video class="video-player" id="videoPlayer" controls></video>
+                <div class="loading-spinner" id="loadingSpinner" style="display: none;"></div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="playPauseBtn">▶️</button>
+                <button class="control-btn" id="prevBtn">⏮️</button>
+                <button class="control-btn" id="nextBtn">⏭️</button>
+                <button class="control-btn" id="muteBtn">🔊</button>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+                
+                <div class="channel-info-display">
+                    <div class="current-channel-name" id="currentChannelName">Select a Channel</div>
+                    <div class="current-channel-details" id="currentChannelDetails">Choose from the sidebar to start watching</div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
