@@ -22,9 +22,6 @@ A lightweight web-based IPTV player built with **HTML, CSS, and JavaScript**, us
 
 ---
 
-
----
-
 ## 📦 Installation & Usage
 
 1. **Clone this repo**:
